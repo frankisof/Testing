@@ -152,7 +152,7 @@ describe('LinealRegresionComponent', () => {
     })
   
     it('Should return yk=49.4994  if x=386', () =>{
-      const yk = component.yk(LinealRegresionComponent,
+      const yk = component.yk(
         component.datos_Api_Test4.proxy_added,
         component.datos_Api_Test4.actual_develop,
         386
