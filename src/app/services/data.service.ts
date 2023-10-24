@@ -11,7 +11,7 @@ export class HoursService {
 
   constructor(private http: HttpClient ) { }
 
-  apiUrl = 'http://localhost:8080/hours';
+  apiUrl = 'http://localhost:8080/dev_hours';
 
   httpOptions = {
     headers: new HttpHeaders ({

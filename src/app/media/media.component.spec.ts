@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
 
 import { HoursService } from './../services/data.service';
 import { SizeService } from '../services/data2.service';
@@ -20,6 +21,10 @@ describe('MediaComponent', () => {
       imports: [ HttpClientTestingModule ],
       providers: [{ provide: HoursService, useValue: hoursService }, HoursService, SizeService] // Proporciona el servicio falso
     }).compileComponents();
+      fixture = TestBed.createComponent(MediaComponent);
+      fixture.detectChanges;
+      component = fixture.componentInstance
+  });
   it('should create', () => {
     expect(component).toBeTruthy();
   });
@@ -64,9 +69,6 @@ describe('MediaComponent', () => {
     expect(result).toBe(5.5);
   }
 
-
-
-});
 });
 
 

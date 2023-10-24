@@ -8,7 +8,7 @@ import { Observable,throwError } from 'rxjs';
 export class TestService {
 
   constructor(private http: HttpClient) { }
-  apiURL = 'https://apicv-service-jose-l17.cloud.okteto.net/';
+  apiURL = 'http://localhost:8080';
 
   httpoptions={
     headers: new HttpHeaders({

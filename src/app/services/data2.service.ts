@@ -11,7 +11,7 @@ export class SizeService {
 
   constructor(private http: HttpClient ) { }
 
-  apiUrl = 'http://localhost:8080/size';
+  apiUrl = 'http://localhost:8080/1a_proxy_size';
 
   httpOptions = {
     headers: new HttpHeaders ({
