@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SimpsonComponent } from './simpson/simpson.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
+import { MediaComponent } from './media/media.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SimpsonComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    MediaComponent
   ],
   imports: [
     BrowserModule,
