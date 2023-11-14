@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('fondo3.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative; /* Añadido para posicionar elementos hijos de forma absoluta */
+  }
+
+  h1 {
+    color: #00ff00; /* Verde neon, puedes cambiarlo a tu gusto */
+    font-size: 36px;
+    margin-top: -50px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+    animation: parpadeo 2s infinite alternate;
+  }
+
+  @keyframes parpadeo {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .boton-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px; /* Ajusta la distancia entre los botones y las imágenes */
+  }
+
+  .boton {
+    position: relative; /* Añadido para posicionar la imagen de forma absoluta respecto al botón */
+    padding: 10px 20px;
+    margin: 15px; /* Ajusta el margen entre los botones */
+    font-size: 30px;
+    color: #fff; /* Texto blanco */
+    background-color: rgb(87, 10, 122); /* Azul, puedes cambiarlo a tu gusto */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .boton:hover {
+    background-color: #044910; /* Cambia el color al pasar el ratón por encima */
+    transform: translateY(-2px); /* Efecto de elevación */
+  }
+
+  .imagen-pequena {
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    height: 150px; /* Mantiene la proporción de la imagen */
+    position: absolute; /* La posiciona de forma absoluta en relación al padre */
+    bottom: -200px; /* Ajusta la distancia desde abajo */
+    left: 50%; /* Posiciona la imagen en el centro del botón */
+    transform: translateX(-50%); /* Corrige la posición para centrarla */
+  }
