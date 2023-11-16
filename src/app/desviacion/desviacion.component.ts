@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as math from 'mathjs';
 
 @Component({
   selector: 'app-desviacion',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./desviacion.component.css']
 })
 export class DesviacionComponent {
-  opcion: number[] = [2];
+  opcion: number[] = [160,591,114,229,230,270,128,1657,624,1530];
   lista1: string = "Resultado Media";
   lista2: string = "Resultado Stddev";
   resultado1: string = "Resultado Media";
@@ -18,7 +19,7 @@ onClickLista1() {
 }
 
 onClickLista2() {
-  this.opcion = [15,69.9,6.5,22.4,28.4,65.9,19.4,198.7,38.8,28.4];
+  this.opcion = [15,69.9,6.5,22.4,28.4,65.9,19.4,198.7,38.8,28.4,138.2];
 }
 
 agregarNumeroLista1() {
@@ -30,24 +31,29 @@ agregarNumeroLista1() {
 }
 
 
-calcular_media(opcion: any[]){
-  const suma = opcion.reduce((acumulador: any, numero: any) => acumulador + numero, 0);
-  const media = suma / opcion.length;
-  return media;
-
+calcular_media(){
+  const numeros = this.opcion
+  const sum = numeros.reduce((a, b) => a + b, 0);
+  const media=(sum / numeros.length);
+  return math.mean(numeros);
 }
 
-calcularStddev(num: number[]) {
-const numeros = num;
-const media = this.calcular_media(numeros);
-const sumatoriaDiferenciasAlCuadrado = num.reduce(
-  (acumulador, numero) => acumulador + Math.pow(numero - media, 2),
-  0
- );
-  const varianzaMuestral = sumatoriaDiferenciasAlCuadrado / (num.length - 1); 
+calcularStddev() {
+  const numeros = this.opcion;
+  const media = this.calcular_media();
+  const sumatoriaDiferenciasAlCuadrado = this.opcion.reduce(
+    (acumulador, numero) => acumulador + Math.pow(numero - media, 2),
+    0
+  );
+  const varianzaMuestral = sumatoriaDiferenciasAlCuadrado / (this.opcion.length - 1);
   const stddevMuestral = Math.sqrt(varianzaMuestral);
   const stddevMuestralRedondeada = stddevMuestral.toFixed(2);
-  return  parseFloat(stddevMuestralRedondeada);
+  this.resultado2 = `Resultado Stddev: ${parseFloat(stddevMuestralRedondeada)}`;
+}
+
+Media() {
+  const media = this.calcular_media();
+  this.resultado1 = `Resultado Media: ${media.toFixed(2)}`;
 }
   
 }

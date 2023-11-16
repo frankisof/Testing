@@ -16,16 +16,10 @@ export class MediaComponent implements OnInit {
  
   
   ngOnInit(): void {
-    this.mediaService.getNumbers().subscribe( (dev) => {
-      this.dev_hours = dev
-      console.log(dev)
+   
 
-  });
-  this.mediaService.getNumbers2().subscribe( (size) => {
-    this.proxy_size = size
-    console.log(size)
-
-});
+  
+  
   }
 
   calcular_media(num: number[]){

@@ -1,23 +1,23 @@
 .body {
   margin: 0;
   padding: 0;
-  background-image: url('fondo3.jpg');
+  background-image: url('../assets/fondo3.jpg');
   background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  position: -webkit-sticky    ; 
+  position: -webkit-sticky;
 }
 
-.h1 {
-  color: #00ff00; 
+h1 {
+  color: #00ff00;
   font-size: 36px;
   margin-top: -50px;
   margin-bottom: 20px;
-  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
-  animation: parpadeo 2s infinite alternate;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00;
+  animation: parpadeo 1s infinite alternate;
 }
 
 @keyframes parpadeo {
@@ -32,16 +32,16 @@
 .boton-container {
   display: flex;
   flex-direction: row;
-  margin-bottom: 50px; 
+  margin-bottom: 50px;
 }
 
 .boton {
-  position: relative; 
+  position: relative;
   padding: 10px 20px;
-  margin: 15px; 
+  margin: 15px;
   font-size: 30px;
   color: #fff;
-  background-color: rgb(87, 10, 122); 
+  background-color: rgb(87, 10, 122);
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -50,15 +50,15 @@
 }
 
 .boton:hover {
-  background-color: #044910; 
-  transform: translateY(-2px); 
+  background-color: #044910;
+  transform: translateY(-2px);
 }
 
 .imagen-pequena {
   width: 150px;
-  height: 150px; 
-  position: absolute; 
-  bottom: -200px; 
-  left: 50%; 
-  transform: translateX(-50%); 
+  height: 150px;
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
 }
