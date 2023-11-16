@@ -1,61 +1,24 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../app/desviacion/desviacion.component.css">
-  <title>Francisco de Jesús Fernández Fernández</title>
+<div class="body">
+  <h1>¡1A Challenge!</h1>
 
-</head>
-<body>
-  <body onload="agregarNumerosAutomaticamente()"></body>
-
-  <h1>¡1A Challenge!!!</h1>
-
-  <!-- Contenedor de botones existente ... -->
-
-  <!-- Contenedor de textareas -->
   <div class="textareas-container">
-    <!-- Dos áreas de texto en una fila -->
-    <textarea id="lista1" readonly>Resultado Media</textarea>
-    <textarea id="lista2" readonly>Resultado Stddev</textarea>
+    <textarea id="lista1" readonly class="textarea">160    591    114    229    230    270    128   1657   624   1530
+        </textarea>
+    <textarea id="lista2" readonly
+      class="textarea">15     69.9   6.5    22.4   28.4   65.9    19.4   198.7    38.8    28.4   138.2</textarea>
   </div>
 
-  <!-- Contenedor de contenedores de resultados -->
   <div class="resultados-container">
-    <div id="resultado1" class="resultado"></div>
-    <div id="resultado2" class="resultado"></div>
+    <div id="resultado1" class="resultado"> {{ resultado1 }}</div>
+    <div id="resultado2" class="resultado"> {{ resultado2 }}</div>
   </div>
 
-  <!-- Contenedor de botones adicionales -->
+
   <div class="accion-container" style="margin-top: 50px;">
     <div class="accion-container" style="margin-left: -600px;"></div>
-    <button class="accion-boton" onclick=" onClickLista1()">Lista 1</button>
-    <button class="accion-boton" onclick=" onClickLista2()">Lista 2</button>
-    <button class="accion-boton" onclick="Media()">Media</button>
-    <button class="accion-boton" onclick="limpiarListas()">Desviacion</button>
+    <button class="accion-boton" (click)="onClickLista1()">Lista 1</button>
+    <button class="accion-boton" (click)="onClickLista2()">Lista 2</button>
+    <button class="accion-boton" (click)="Media()">Media</button>
+    <button class="accion-boton" (click)="calcularStddev()">Desviacion</button>
   </div>
-
-  <script>
-  
-   
-
-    function agregarNumeroLista1() {
-      var textarea = document.getElementById("lista1");
-      textarea.value = "160\n591\n114\n229\n230\n270\n128\n1657\n624\n1530";
-    }
-
-    function agregarNumeroLista2() {
-      var textarea = document.getElementById("lista2");
-      textarea.value = "15\n69.9\n6.5\n22.4\n28.4\n65.9\n19.4\n198.7\n38.8\n28.4";
-    }
-
-    function agregarNumerosAutomaticamente() {
-      agregarNumeroLista1();
-      agregarNumeroLista2();
-    }
-  </script>
-
-</body>
-</html>
-
+</div>

@@ -103,6 +103,12 @@ describe('SimpsonComponent', () => {
           expect(integral).toBeCloseTo( 0.49500); 
 
         });
+
+        it('should return 1 when x is 1', () => {
+          const result = component.Gamma(1);
+      
+          expect(result).toEqual(1);
+        });
       });
   
    
