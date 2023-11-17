@@ -7,29 +7,5 @@ import { Observable,throwError } from 'rxjs';
 })
 export class TestService {
 
-  constructor(private http: HttpClient) { }
-  apiURL = 'http://localhost:8080';
-
-  httpoptions={
-    headers: new HttpHeaders({
-      'Content-Type':'application/json'
-    })
-  }
-
-  obtenerDatos1():Observable<any>{
-    return this.http.get<any>(this.apiURL+'test1',this.httpoptions)
-  }
-
-  obtenerDatos2():Observable<any>{
-    return this.http.get<any>(this.apiURL+'test2',this.httpoptions)
-  }
-
-  obtenerDatos3():Observable<any>{
-    return this.http.get<any>(this.apiURL+'test3',this.httpoptions)
-  }
-
-  obtenerDatos4():Observable<any>{
-    return this.http.get<any>(this.apiURL+'test4',this.httpoptions)
-  }
 
 }

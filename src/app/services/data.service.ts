@@ -9,29 +9,4 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class HoursService {
 
-  constructor(private http: HttpClient ) { }
-
-  apiUrl = 'http://localhost:8080/dev_hours';
-
-  httpOptions = {
-    headers: new HttpHeaders ({
-      'Content-Type' : 'application/json'
-    })
-  }
-
-  getHours() : Observable <any> {
-    return this.http.get<any>(this.apiUrl, this.httpOptions);
-  }
-
-  handleError(error: any) {
-    let errorMessage = '';
-
-    if(error.error instanceof ErrorEvent) {
-      errorMessage = error.error.message;
-    } else {
-      errorMessage = `Error code: ${error.status} \n Message: ${error.message}`
-    }
-    window.alert(errorMessage);
-    return throwError(errorMessage);
-  }
 }

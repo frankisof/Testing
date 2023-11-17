@@ -63,6 +63,9 @@ describe('SimpsonComponent', () => {
     it('prueba funcion gama con numero decimal', () => {
       expect( component.Gamma(4.5) ).toBeCloseTo(20.61, 1); 
       });
+      it('prueba funcion gama con numero decimal', () => {
+        expect( component.Gamma(1) ).toBeCloseTo( 1); 
+        });
 
       it('prueba funcion gama con numero entero', () => {
         expect( component.Gamma(5) ).toBeCloseTo(24, 0); 

@@ -1,0 +1,107 @@
+.resultados-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px;
+  }
+  
+  .resultado {
+    width: 250px;
+    height: 25px;
+    margin-top: -100px;
+    margin-left: 700px;
+    margin-right: 170px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ffffff;
+  }
+  
+  .body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../solucion/fondo3.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: -webkit-sticky;
+  }
+  
+  h1 {
+    color: #00ff00;
+    font-size: 36px;
+    margin-top: 200px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+    animation: parpadeo 1s infinite alternate;
+  }
+
+  label {
+    color: #00ff00;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+    animation: parpadeo 1s infinite alternate;
+  }
+  
+  
+  @keyframes parpadeo {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  
+  .textarea {
+    width: 350px;
+    height: 20px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10x;
+    padding: 10px;
+    font-size: 16px;
+        
+  }
+  
+  
+  .accion-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -290px; /* Ajusta este valor según sea necesario */
+    margin-left: -900px;
+    flex-direction: column;
+  }
+  
+  
+  .accion-boton {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgb(87, 10, 122);
+    border: none;
+    cursor: pointer;
+    border-radius: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 10px;   
+}
+  
+  .accion-boton:hover {
+    background-color: #044910;
+    transform: translateY(-2px);
+  }
+  
+  
+  .textareas-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: -250px;
+    margin-top: 90px; /* Ajusta este valor según sea necesario */
+  }

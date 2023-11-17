@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { TestService } from '../services/datatest1.service';
+
+
 
 
 @Component({
@@ -8,11 +11,12 @@ import { TestService } from '../services/datatest1.service';
   styleUrls: ['./lineal-regresion.component.css']
 })
 export class LinealRegresionComponent implements OnInit {
+  Valor_x: number =0;
   resultado1: number = 0;
   resultado2: string = "resultadoB0";
   resultado3: string = "resultadoyk";
   array1: string = "resultadoyk";
-valorX: any;
+
   constructor(public tesService: TestService) { }
 
   public datos_Api_Test: any;

@@ -7,6 +7,7 @@ import * as math from 'mathjs';
   styleUrls: ['./desviacion.component.css']
 })
 export class DesviacionComponent {
+  operator1: number =2;
   opcion: number[] = [160,591,114,229,230,270,128,1657,624,1530];
   lista1: string = "Resultado Media";
   lista2: string = "Resultado Stddev";
