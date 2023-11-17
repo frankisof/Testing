@@ -1,1 +1,33 @@
-<p>lineal-regresion works!</p>
+<div class="body">
+    <h1>¡3A Challenge!</h1>
+  
+    <div class="textareas-container">
+      <div >
+        <textarea id="lista" readonly class="textarea">[130, 650, 99] & [186, 699, 132]</textarea>
+      </div>
+      <div >
+        <textarea id="lista" readonly class="textarea">[130, 650, 99] & [15.0, 69.9, 6.5]</textarea>
+      </div>
+      <div >
+        <textarea id="lista" readonly class="textarea">[163, 765, 141] & [186, 699, 132]</textarea>
+      </div>
+      <div  >
+        <textarea id="lista" readonly class="textarea">[163, 765, 141] & [15.0, 69.9, 6.5]</textarea>
+      </div>
+    </div>
+  
+    <div class="resultados-container">
+      <div id="resultado" class="resultado" > {{ resultado1 }}</div>
+      <div id="resultado" class="resultado" > {{ resultado2 }}</div>
+      <div id="resultado" class="resultado" > {{ resultado3 }}</div>
+    </div>
+  
+    <div class="accion-container" style="margin-top: 50px;">
+      <button class="accion-boton" (click)="lista1()">Lista 1</button>
+      <button class="accion-boton" (click)="lista2()">Lista 2</button>
+      <button class="accion-boton" (click)="lista3()">Lista 3</button>
+      <button class="accion-boton" (click)="lista4()">Lista 4</button>
+      <button class="accion-boton" (click)="obtenerRegresion()">Calcular Regresión</button>
+    </div>
+  </div>
+  
