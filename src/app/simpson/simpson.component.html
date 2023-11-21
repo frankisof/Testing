@@ -1,1 +1,95 @@
-<p>simpson works!</p>
+<div class="body">
+  <h1>¡5A Challenge!</h1>
+  <div class="input-container">
+    <div class="data-input">
+      <div class="label-container">
+        <label for="funcion" class="label">Funcion:</label>
+      </div>
+      <input type="text" id="funcion" class="input-field" [(ngModel)]="funcion">
+    </div>
+  </div>
+  
+  <div class="input-container">
+    <div class="data-input">
+      <div class="label-container">
+        <label for="x0" class="label">X0:</label>
+      </div>
+      <input type="text" id="x0" class="input-field" [(ngModel)]="x0">
+    </div>
+  </div>
+  
+  <div class="input-container">
+    <div class="data-input">
+      <div class="label-container">
+        <label for="x1" class="label">X1:</label>
+      </div>
+      <input type="text" id="x1" class="input-field" [(ngModel)]="x1">
+    </div>
+  </div>
+  
+  <div class="input-container">
+    <div class="data-input">
+      <div class="label-container">
+        <label for="segmentos" class="label">Segmentos:</label>
+      </div>
+      <input type="text" id="segmentos" class="input-field" [(ngModel)]="n">
+    </div>
+  </div>
+  
+  <div class="input-container">
+    <div class="data-input">
+      <div class="label-container">
+        <label for="tolerancia" class="label">Tolerancia:</label>
+      </div>
+      <input type="text" id="tolerancia" class="input-field" [(ngModel)]="tolerancia">
+    </div>
+  </div>
+  
+  <div class="input-container">
+    <div class="data-input">
+      <div class="label-container">
+        <label for="numero" class="label">Numero:</label>
+      </div>
+      <input type="text" id="numero" class="input-field" [(ngModel)]="numero">
+    </div>
+  </div>
+  
+  <div class="input-container">
+    <div class="data-input">
+      <div class="label-container">
+        <label for="dof" class="label">DOF:</label>
+      </div>
+      <input type="text" id="dof" class="input-field" [(ngModel)]="dof">
+    </div>
+  </div>
+  
+    
+    
+  
+
+    <div class="action-container">
+      <button class="accion-boton" (click)="calcular_simson()">calcular simpsom</button>
+      <button class="accion-boton" (click)="calcular_t()">calcular funcion t</button>
+      <button class="accion-boton" (click)="calcular_simpsont()">calcular simpson t</button>
+    </div>
+  
+    <!-- Resultados -->
+    <div class="resultados-container">
+      <div class="resultado">
+        <label for="resultado1">simpson:</label>
+        <div id="resultado1" class="resultado-content">{{ resultado1 }}</div>
+      </div>
+    
+      <div class="resultado">
+        <label for="resultado2">funcion t:</label>
+        <div id="resultado2" class="resultado-content">{{ resultado2 }}</div>
+      </div>
+    
+      <div class="resultado">
+        <label for="resultado3">simpson t:</label>
+        <div id="resultado3" class="resultado-content">{{ resultado3 }}</div>
+      </div>
+    </div>
+    
+    
+  

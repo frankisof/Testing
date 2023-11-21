@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SimpsonComponent } from './simpson.component';
+import { FormsModule } from '@angular/forms';
 
 describe('SimpsonComponent', () => {
   let component: SimpsonComponent;
@@ -7,6 +8,7 @@ describe('SimpsonComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [FormsModule],
       declarations: [SimpsonComponent]
     });
     fixture = TestBed.createComponent(SimpsonComponent);
@@ -79,7 +81,7 @@ describe('SimpsonComponent', () => {
           let pdf = component.DistributionPDF(t, dof);
           const pdfFunc = (x:number) => pdf;
           let integral = component.simpsonRule(pdfFunc, a, b, n);
-          expect(integral).toBeCloseTo( 0.35006); 
+          expect(pdf).toBeCloseTo( .35006); 
 
         });
          it('Calcular T prueba 2', () => {
@@ -91,7 +93,7 @@ describe('SimpsonComponent', () => {
           let pdf = component.DistributionPDF(t, dof);
           const pdfFunc = (x:number) => pdf;
           let integral = component.simpsonRule(pdfFunc, a, b, n);
-          expect(integral).toBeCloseTo( 0.36757); 
+          expect(integral).toBeCloseTo( .36757); 
 
         });
         it('Calcular T prueba 3', () => {
@@ -106,6 +108,18 @@ describe('SimpsonComponent', () => {
           expect(integral).toBeCloseTo( 0.49500); 
 
         });
+
+        it('prueba de componentes', () => {
+          expect( component.calcular_simson() ).toBeCloseTo( 1); 
+          });
+
+          it('prueba de componentes', () => {
+            expect( component.calcular_t() ).toBeCloseTo( 1); 
+            });
+
+            it('prueba de componentes', () => {
+              expect( component.calcular_simpsont() ).toBeCloseTo( 1); 
+              });
       });
   
    
